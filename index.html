@@ -1,117 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Meta and favicon links -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
-  <link rel="manifest" href="/meta/manifest.json">
-  <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#0096ff">
-  <link rel="shortcut icon" href="/meta/favicon.ico">
-  <meta name="msapplication-TileColor" content="#0a0a14">
-  <meta name="msapplication-config" content="/meta/browserconfig.xml">
-  <meta name="theme-color" content="#0a0a14">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta and favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+    <link rel="manifest" href="/meta/manifest.json">
+    <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#0096ff">
+    <link rel="shortcut icon" href="/meta/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0a0a14">
+    <meta name="msapplication-config" content="/meta/browserconfig.xml">
+    <meta name="theme-color" content="#0a0a14">
 
-  <!-- Linking external stylesheets and fonts -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Linking external stylesheets and fonts -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Inline styles -->
-  <style>
-    /* Additional styles can be placed inline or in styles.css */
-    :root {
-      --color-dark: 10, 10, 20;
-      --color-light: 255, 255, 255;
-    }
-  </style>
-</head>
-<body>
+    <!-- Inline styles -->
+    <style>
+      /* Additional styles can be placed inline or in styles.css */
+      :root {
+        --color-dark: 10, 10, 20;
+        --color-light: 255, 255, 255;
+      }
+    </style>
+  </head>
+  <body>
 
-  <!-- Header section -->
-  <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <!-- Logo SVG -->
-        <svg class="header__shape" viewBox="0 0 89 68" xmlns="http://www.w3.org/2000/svg">
-          <path d="M52.88 57.62 4.126 37.897a3 3 0 0 0-2.25 5.562L58.95 66.55a11.062 11.062 0 0 0 2.1.849l.154.062c.351.142.714.213 1.071.22 5.35.912 10.682-2.253 12.34-7.577l14.27-45.83C90.694 8.473 87.456 2.307 81.654.5c-5.8-1.806-11.966 1.432-13.773 7.233l-8.23 26.429L49.03 4.479a5 5 0 1 0-9.415 3.37l14.04 39.23-31.087-31.085a4 4 0 1 0-5.657 5.656l35.97 35.97Z"></path>
-        </svg>
-        <!-- Text SVG -->
-        <svg class="header__text" viewBox="0 0 652 74" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="50" font-family="Roboto" font-size="70" fill="white">Book Connect</text>
-        </svg>
-      </div>
-      <!-- Search and settings buttons -->
-      <div>
-        <button class="header__button" data-header-search>
-          <svg class="header__icon" viewBox="0 96 960 960" xmlns="http://www.w3.org/2000/svg">
-            <path d="M796 934 556 694q-38 32-86 48.5T370 759q-125 0-212.5-87.5T70 459q0-125 87.5-212.5T370 159q125 0 212.5 87.5T670 459q0 55-16.5 103t-48.5 86l240 240q12 12 12 28.5T845 961q-11 11-28 11.5T796 934ZM370 659q92 0 156.5-64.5T591 438q0-92-64.5-156.5T370 217q-92 0-156.5 64.5T149 438q0 92 64.5 156.5T370 659Z"/>
+    <script type="module" src="./components/book-preview.js"></script>
+
+    <!-- Header section -->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <!-- Logo SVG -->
+          <svg class="header__shape" viewBox="0 0 89 68" xmlns="http://www.w3.org/2000/svg">
+            <path d="M52.88 57.62 4.126 37.897a3 3 0 0 0-2.25 5.562L58.95 66.55a11.062 11.062 0 0 0 2.1.849l.154.062c.351.142.714.213 1.071.22 5.35.912 10.682-2.253 12.34-7.577l14.27-45.83C90.694 8.473 87.456 2.307 81.654.5c-5.8-1.806-11.966 1.432-13.773 7.233l-8.23 26.429L49.03 4.479a5 5 0 1 0-9.415 3.37l14.04 39.23-31.087-31.085a4 4 0 1 0-5.657 5.656l35.97 35.97Z"></path>
           </svg>
-        </button>
-        <button class="header__button" data-header-settings>
-          <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
-            <path d="M479.796 562q-77.203 0-126-48.796Q305 464.407 305 387.204 305 310 353.796 261q48.797-49 126-49Q557 212 606.5 261T656 387.204q0 77.203-49.5 126Q557 562 479.796 562ZM135 934V813.205q0-44.507 22.828-77.721Q180.656 702.27 217 685q69-31 133.459-46.5T479.731 623q66.731 0 130.5 16 63.769 16 131.69 46.194 37.911 16.085 60.995 49.445Q826 768 826 812.945V934H135Zm94-94h502v-23q0-15.353-9.5-29.323Q712 773.706 698 767q-60-28-110.495-38.5-50.496-10.5-108-10.5Q424 718 371.5 728.5 319 739 261.429 766.844 247 773.559 238 787.575q-9 14.016-9 29.425v23Zm250.796-372Q515 468 538 445.154t23-58.119q0-35.685-22.796-58.36-22.797-22.675-58-22.675Q445 306 422 328.721t-23 57.819q0 35.51 22.796 58.485 22.797 22.975 58 22.975Zm.204-81Zm0 453Z"/>
+          <!-- Text SVG -->
+          <svg class="header__text" viewBox="0 0 652 74" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="50" font-family="Roboto" font-size="70" fill="white">Book Connect</text>
           </svg>
-        </button>
+        </div>
+        <!-- Search and settings buttons -->
+        <div>
+          <button class="header__button" data-header-search>
+            <svg class="header__icon" viewBox="0 96 960 960" xmlns="http://www.w3.org/2000/svg">
+              <path d="M796 934 556 694q-38 32-86 48.5T370 759q-125 0-212.5-87.5T70 459q0-125 87.5-212.5T370 159q125 0 212.5 87.5T670 459q0 55-16.5 103t-48.5 86l240 240q12 12 12 28.5T845 961q-11 11-28 11.5T796 934ZM370 659q92 0 156.5-64.5T591 438q0-92-64.5-156.5T370 217q-92 0-156.5 64.5T149 438q0 92 64.5 156.5T370 659Z"/>
+            </svg>
+          </button>
+          <button class="header__button" data-header-settings>
+            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+              <path d="M479.796 562q-77.203 0-126-48.796Q305 464.407 305 387.204 305 310 353.796 261q48.797-49 126-49Q557 212 606.5 261T656 387.204q0 77.203-49.5 126Q557 562 479.796 562ZM135 934V813.205q0-44.507 22.828-77.721Q180.656 702.27 217 685q69-31 133.459-46.5T479.731 623q66.731 0 130.5 16 63.769 16 131.69 46.194 37.911 16.085 60.995 49.445Q826 768 826 812.945V934H135Zm94-94h502v-23q0-15.353-9.5-29.323Q712 773.706 698 767q-60-28-110.495-38.5-50.496-10.5-108-10.5Q424 718 371.5 728.5 319 739 261.429 766.844 247 773.559 238 787.575q-9 14.016-9 29.425v23Zm250.796-372Q515 468 538 445.154t23-58.119q0-35.685-22.796-58.36-22.797-22.675-58-22.675Q445 306 422 328.721t-23 57.819q0 35.51 22.796 58.485 22.797 22.975 58 22.975Zm.204-81Zm0 453Z"/>
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Main content section -->
-  <main class="list">
-    <!-- List of items -->
-    <div class="list__items" data-list-items></div>
-    <!-- Message displayed when no results are found -->
-    <div class="list__message" data-list-message>No results found. Your filters might be too narrow.</div>
-    <!-- Button to load more items -->
-    <button class="list__button" data-list-button></button>
-  </main>
+    <!-- Main content section -->
+    <main class="list">
+      <!-- List of items -->
+      <div class="list__items" data-list-items></div>
+      <!-- Message displayed when no results are found -->
+      <div class="list__message" data-list-message>No results found. Your filters might be too narrow.</div>
+      <!-- Button to load more items -->
+      <button class="list__button" data-list-button></button>
+    </main>
 
-  <!-- Dialog for item details -->
-  <dialog class="overlay" data-list-active>
-    <div class="overlay__preview">
-      <img class="overlay__blur" data-list-blur src="">
-      <img class="overlay__image" data-list-image src="">
-    </div>
-    <div class="overlay__details">
-      <h2 class="overlay__title" data-list-title></h2>
-      <h3 class="overlay__subtitle" data-list-subtitle></h3>
-      <p class="overlay__description" data-list-description></p>
-      <button class="overlay__close" data-list-close>Close</button>
-    </div>
-  </dialog>
+    <!-- Dialog for item details -->
+    <dialog class="overlay" data-list-active>
+      <div class="overlay__preview">
+        <img class="overlay__blur" data-list-blur src="">
+        <img class="overlay__image" data-list-image src="">
+      </div>
+      <div class="overlay__details">
+        <h2 class="overlay__title" data-list-title></h2>
+        <h3 class="overlay__subtitle" data-list-subtitle></h3>
+        <p class="overlay__description" data-list-description></p>
+        <button class="overlay__close" data-list-close>Close</button>
+      </div>
+    </dialog>
 
-  <!-- Dialog for search functionality -->
-  <dialog class="overlay" data-search-overlay>
-    <form class="overlay__form" data-search-form>
-      <input type="text" class="overlay__input" placeholder="Search by title..." name="title" data-search-title>
-      <select class="overlay__select" name="genre" data-search-genres></select>
-      <select class="overlay__select" name="author" data-search-authors></select>
-      <button class="overlay__button" type="button" data-search-cancel>Cancel</button>
-      <button class="overlay__button" type="submit">Search</button>
-    </form>
-  </dialog>
+    <!-- Dialog for search functionality -->
+    <dialog class="overlay" data-search-overlay>
+      <form class="overlay__form" data-search-form>
+        <input type="text" class="overlay__input" placeholder="Search by title..." name="title" data-search-title>
+        <select class="overlay__select" name="genre" data-search-genres></select>
+        <select class="overlay__select" name="author" data-search-authors></select>
+        <button class="overlay__button" type="button" data-search-cancel>Cancel</button>
+        <button class="overlay__button" type="submit">Search</button>
+      </form>
+    </dialog>
 
-  <!-- Dialog for settings -->
-  <dialog class="overlay" data-settings-overlay>
-    <form class="overlay__form" data-settings-form>
-      <label for="theme">Theme:</label>
-      <select id="theme" class="overlay__select" name="theme" data-settings-theme>
-        <option value="day">Day</option>
-        <option value="night">Night</option>
-      </select>
-      <button class="overlay__button" type="button" data-settings-cancel>Cancel</button>
-      <button class="overlay__button" type="submit">Apply</button>
-    </form>
-  </dialog>
+    <!-- Dialog for settings -->
+    <dialog class="overlay" data-settings-overlay>
+      <form class="overlay__form" data-settings-form>
+        <label for="theme">Theme:</label>
+        <select id="theme" class="overlay__select" name="theme" data-settings-theme>
+          <option value="day">Day</option>
+          <option value="night">Night</option>
+        </select>
+        <button class="overlay__button" type="button" data-settings-cancel>Cancel</button>
+        <button class="overlay__button" type="submit">Apply</button>
+      </form>
+    </dialog>
 
-  <!-- JavaScript files -->
-  <script type="module" src="./data.js"></script>
-  <script type="module" src="./scripts.js"></script>
-</body>
-</html>
+    <!-- JavaScript files -->
+    <script type="module" src="./data.js"></script>
+    <script type="module" src="./scripts.js"></script>
+  </body>
+  </html>
